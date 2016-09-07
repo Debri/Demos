@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.geek</groupId>
-    <artifactId>leo</artifactId>
+    <artifactId>Liu</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
@@ -42,4 +42,5 @@
         </dependency>
 
     </dependencies>
+
 </project>

@@ -24,7 +24,7 @@ public class EmailUtilTest {
         mail.setMessage("ceshi");
         mail.setTopic("simpleTest");
         mail.setPort("465");
-        EmailUtil emailUtil=new EmailUtil();
+        EmailUtil emailUtil = new EmailUtil();
      emailUtil.send(mail);
 
     }
