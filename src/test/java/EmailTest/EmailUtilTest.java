@@ -17,10 +17,10 @@ public class EmailUtilTest {
     public void send() throws Exception {
         Mail mail=new Mail();
         mail.setSender("18908356464@163.com");
-        mail.setReceiver("18908356464@163.com");
+        mail.setReceiver("2290832242@qq.com");
         mail.setHost("smtp.163.com");
         mail.setUsername("18908356464@163.com");
-        mail.setPassword("saiqi1231");
+        mail.setPassword("saiqi1234");
         mail.setMessage("ceshi");
         mail.setTopic("simpleTest");
         mail.setPort("465");
