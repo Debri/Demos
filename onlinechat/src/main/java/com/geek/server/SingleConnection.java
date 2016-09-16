@@ -1,15 +1,18 @@
+/*
 package com.geek.server;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+*/
 /**
  * Created by Liuqi
  * Date: 2016/9/15
  * Email: 18908356464@163.com
  * Project: Demos
- */
+ *//*
+
 public class SingleConnection implements Runnable {
 
     private Socket socket;
@@ -40,7 +43,6 @@ public class SingleConnection implements Runnable {
             while (bConnected) {
                 String str = dis.readUTF();
                 System.out.println(str);
-
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,3 +58,4 @@ public class SingleConnection implements Runnable {
         }
     }
 }
+*/
