@@ -128,6 +128,4 @@ public class CharClient extends JFrame {
             }
         }
     }
-
-
 }

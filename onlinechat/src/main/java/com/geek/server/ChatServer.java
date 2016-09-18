@@ -11,6 +11,7 @@ import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by Liuqi
@@ -22,6 +23,7 @@ public class ChatServer {
     List<SingleConnection> list = new ArrayList<SingleConnection>();
 
     public static void main(String[] args) {
+        UUID i= UUID.randomUUID();
         new ChatServer().start();
     }
 
@@ -47,7 +49,6 @@ public class ChatServer {
                 new Thread(sc).start();
             }
         } catch (IOException e) {
-
             e.printStackTrace();
             System.out.println("client closed！");
         } finally {
