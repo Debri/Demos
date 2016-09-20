@@ -9,7 +9,6 @@ package MyData.hash;
 public class MyHash {
     /**
      * 将一个字符串转化为hash函数
-     *
      * @param key
      * @param tableSize
      * @return
