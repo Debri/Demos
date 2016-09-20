@@ -1,4 +1,4 @@
-package MyData.cursor;
+package MyData.tree;
 
 /**
  * Created by Liuqi
@@ -7,10 +7,13 @@ package MyData.cursor;
  * Project: Demos
  */
 
+import static java.lang.Math.max;
+
 /**
  * 查找二叉树实现
  */
 public class BinaryNode {
+
     public Object element;
     public BinaryNode liftChild;
     public BinaryNode rightChild;
@@ -25,7 +28,6 @@ public class BinaryNode {
      * 在查找二叉树中查找
      *
      * @param x
-     * @param t
      * @return
      */
     public BinaryNode find(Comparable x, BinaryNode t) {
@@ -76,17 +78,38 @@ public class BinaryNode {
         }
         if (x.compareTo(t.element) < 0) {
             t.liftChild = remeve(x, t.liftChild);
-        } else
-            if (x.compareTo(t.element) > 0) {
+        } else if (x.compareTo(t.element) > 0) {
             t.rightChild = remeve(x, t.rightChild);
-        } else
-            if (t.liftChild != null && t.rightChild != null) {
+        } else if (t.liftChild != null && t.rightChild != null) {
             t.element = findMin(t.rightChild).element;
             t.rightChild = remeve(x, t.rightChild);
         } else {
             t = (t.liftChild != null) ? t.liftChild : t.rightChild;
         }
         return t;
+    }
+
+    /**
+     * 遍历二叉树
+     * 中序遍历
+     */
+    public void printTree(BinaryNode root) {
+        if (root != null) {
+            printTree(root.liftChild);
+            System.out.println(root.element);
+            printTree(root.rightChild);
+        }
+    }
+
+    /**
+     * 求树的深度
+     */
+    public int height(BinaryNode root) {
+        if (root == null) {
+            return -1;
+        } else {
+            return 1 + max(height(root.liftChild), height(root.rightChild));
+        }
     }
 
 }
