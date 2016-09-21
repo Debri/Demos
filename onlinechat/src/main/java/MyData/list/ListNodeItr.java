@@ -6,21 +6,19 @@ package MyData.list;
  * Email: 18908356464@163.com
  * Project: Demos
  */
-public class MyListItr {
+public class ListNodeItr {
     public ListNode currentNode;
 
     /**
      * 构造方法
-     *
      * @param currentNode
      */
-    public MyListItr(ListNode currentNode) {
+    public ListNodeItr(ListNode currentNode) {
         this.currentNode = currentNode;
     }
 
     /**
      * 判断是否为结尾
-     *
      * @return
      */
     public boolean isEnd() {

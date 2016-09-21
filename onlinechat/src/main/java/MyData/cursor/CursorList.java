@@ -6,6 +6,10 @@ package MyData.cursor;
  * Email: 18908356464@163.com
  * Project: Demos
  */
+
+/**
+ * 带游标的链表
+ */
 public class CursorList {
     private int header;
     private static final int SPACE_SIZE = 100;

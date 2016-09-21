@@ -15,7 +15,6 @@ public class MyList {
 
     /**
      * 判断链表是否为空
-     *
      * @return
      */
     public boolean idEmpty() {
@@ -32,12 +31,12 @@ public class MyList {
     /**
      * 查找
      */
-    public MyListItr find(Object obj) {
+    public ListNodeItr find(Object obj) {
         ListNode ln = head.nextNode;
         while (ln != null && !ln.element.equals(obj)) {
             ln = ln.nextNode;
         }
-        return new MyListItr(ln);
+        return new ListNodeItr(ln);
     }
 
     /**
@@ -48,7 +47,7 @@ public class MyList {
         while (ln != null && !ln.element.equals(obj)) {
             ln = ln.nextNode;
         }
-        MyListItr mli = new MyListItr(ln);
+        ListNodeItr mli = new ListNodeItr(ln);
         if (mli.currentNode.nextNode != null) {
             mli.currentNode.nextNode = mli.currentNode.nextNode.nextNode;
         }
@@ -57,7 +56,7 @@ public class MyList {
     /**
      * 插入
      */
-    public void insert(Object obj, MyListItr mli) {
+    public void insert(Object obj, ListNodeItr mli) {
         if (mli != null && mli.currentNode != null) {
             mli.currentNode.nextNode = new ListNode(obj, mli.currentNode.nextNode);
         }

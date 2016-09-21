@@ -9,12 +9,14 @@ package MyData.heap;
 
 /**
  * 二叉堆，用数组实现
- * 假设看作二叉树，根节点小于左右子节点，中序遍历是有序序列
+ * 假设将其看作完全 二叉树，根节点小于左右子节点，中序遍历是有序序列
+ * 堆的缺点：不能实现find操作
  */
 public class BinaryHeap {
     private int currentSize;
     private static final int DEFAULT_CAPACITY = 100;
     private Comparable[] arrays;
+
 
     /**
      * 构造方法
@@ -26,6 +28,14 @@ public class BinaryHeap {
     public BinaryHeap(int capacity) {
         this.currentSize = 0;
         arrays = new Comparable[capacity + 1];
+    }
+
+    public int getCurrentSize() {
+        return currentSize;
+    }
+
+    public Comparable[] getArrays() {
+        return arrays;
     }
 
     /**
