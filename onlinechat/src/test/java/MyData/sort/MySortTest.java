@@ -17,7 +17,7 @@ public class MySortTest {
 
     @Before
     public void setup() {
-        a = new int[]{2, 4, 8, 9, 45, 45, 7, 3, 6};
+        a = new int[]{87, 2, 6, 4, 8, 9, 45, 45, 7, 3, 2, 23, 4, 6};
     }
 
     @Test
@@ -33,6 +33,14 @@ public class MySortTest {
         ms.shellSort(a);
         for (int i = 0; i < a.length; i++) {
             System.out.println("希尔" + a[i]);
+        }
+    }
+
+    @Test
+    public void heapSort() throws Exception {
+        ms.heapSort(a);
+        for (int i = 0; i < a.length; i++) {
+            System.out.println("堆" + a[i]);
         }
     }
 

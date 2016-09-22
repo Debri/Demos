@@ -41,4 +41,45 @@ public class MySort {
         }
     }
 
+    /**
+     * 堆排序 稳定的排序
+     */
+    public void heapSort(int[] data) {
+        for (int i = data.length / 2; i >= 0; i--) {
+            percDown(data, i, data.length);
+        }
+        for (int i = data.length - 1; i > 0; i--) {
+            swapReference(data, 0, i);
+            percDown(data, 0, i);
+        }
+    }
+
+    //数据交换
+    private static void swapReference(int[] data, int i, int n) {
+        int temp = data[i];
+        data[i] = data[n];
+        data[n] = temp;
+    }
+
+    //下坠操作，创建大顶堆
+    private static void percDown(int[] data, int i, int n) {
+        int child;
+        int temp;
+        for (temp = data[i]; leftChild(i) < n; i = child) {/**/
+            child = leftChild(i);
+            if (child != n - 1 && data[child] < data[child + 1]) {
+                child++;
+            }
+            if (temp < data[child]) {
+                data[i] = data[child];
+            } else
+                break;
+        }
+        data[i] = temp;
+    }
+
+    private static int leftChild(int i) {
+        return 2 * i;
+    }
+
 }
