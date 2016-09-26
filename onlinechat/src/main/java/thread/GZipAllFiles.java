@@ -16,7 +16,6 @@ public class GZipAllFiles {
 
     /**
      * 使用线程池
-     *
      * @param args
      */
     public static void main(String[] args) {
