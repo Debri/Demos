@@ -34,8 +34,8 @@ public class InetTest {
     }
 
     @Test
-    public void viewSource() {
-        inet.viewSource("http://172.22.4.2");
+    public void viewSource2() {
+        //inet.sourceView2("http://172.22.4.2");
     }
 
 }

@@ -10,7 +10,6 @@ import org.junit.Test;
  */
 public class simpleProxyTest {
     SimpleProxy pro = new SimpleProxy();
-
     @Test
     public void showSystemInfo() throws Exception {
         pro.showSystemInfo();

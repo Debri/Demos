@@ -29,7 +29,7 @@
     <bytecodeTargetLevel>
       <module name="Chart" target="1.5" />
       <module name="IdeaProject" target="1.5" />
-      <module name="onlinechat" target="1.5" />
+      <module name="onlinechat" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

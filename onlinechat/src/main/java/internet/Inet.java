@@ -1,10 +1,7 @@
 package internet;
 
 import java.io.*;
-import java.net.InetAddress;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.UnknownHostException;
+import java.net.*;
 
 /**
  * Created by Liuqi
@@ -13,6 +10,39 @@ import java.net.UnknownHostException;
  * Project: Demos
  */
 public class Inet {
+    /**
+     * 使用URLConnection下载一个web页面
+     * 并且将其写到磁盘文件中
+     */
+    public void sourceView2(String u, String path) {
+
+        try {
+            URL url = new URL(u);
+
+            String filename = url.getFile();//获取URL中包含的二进制文件的名字
+            filename = filename.substring(filename.lastIndexOf("/") + 1);
+
+            URLConnection uc = url.openConnection();
+
+            int contentLenth = uc.getContentLength();
+            String contentType = uc.getContentType();
+
+            try (InputStream raw = uc.getInputStream()) {//java 7的写法，同时当输入流结束的时候可以自动关闭
+                InputStream is = new BufferedInputStream(raw);
+                Reader reader = new InputStreamReader(is);
+                int c = 0;
+                while ((c = reader.read()) != -1) {
+                    System.out.print((char) c);
+                }
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public static void main(String[] args) {
         byte[] b = new byte[]{(byte) 172, 22, 4, 2};
         InetAddress[] addresses = null;
@@ -41,6 +71,9 @@ public class Inet {
         return address.toString();
     }
 
+    /**
+     * 使用简单的openStream下载一个web页面
+     */
     public void viewSourceByte(String u) {
         InputStream is = null;
         try {
