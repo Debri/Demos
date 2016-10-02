@@ -1,9 +1,9 @@
 package mySocket;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import javax.net.SocketFactory;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
+import java.io.*;
 import java.net.Socket;
 
 /**
@@ -13,10 +13,11 @@ import java.net.Socket;
  * Project: Demos
  */
 public class MyClient {
+    public MyClient() throws IOException {
+    }
+
     /**
      * 从time.nist.gov服务器获取时间
-     *
-     * @return
      */
     public StringBuilder receiveTime() {
         Socket socket = null;
@@ -44,7 +45,33 @@ public class MyClient {
         return time;
     }
 
-
-    public MyClient() throws IOException {
+    /**
+     * 加密的Socket
+     */
+    public void sslSocket(String host, int port) {
+        //使用SSLSocketFactory.getDefault()获取加密的Socket
+        SocketFactory socketFactory = SSLSocketFactory.getDefault();
+        SSLSocket socket = null;
+        try {
+            //createSocket()方法
+            socket = (SSLSocket) socketFactory.createSocket(host, port);
+            String[] str = socket.getSupportedCipherSuites();
+            for (int i = 0; i < str.length; i++) {
+                System.out.println(str[i]);
+            }
+            Writer writer = new OutputStreamWriter(new BufferedOutputStream(socket.getOutputStream()));
+            writer.write("bingo");
+            writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (socket != null) {
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }

@@ -13,6 +13,9 @@ import java.util.Properties;
 public class SimpleProxy {
     public void showSystemInfo() {
         Properties pro = System.getProperties();
+        /**
+         * 遍历Map
+         */
         Iterator ite = pro.entrySet().iterator();
         while (ite.hasNext()) {
             Map.Entry entry = (Map.Entry) ite.next();
@@ -21,6 +24,5 @@ public class SimpleProxy {
             System.out.println(name + ":" + value);
 
         }
-
     }
 }

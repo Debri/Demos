@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.Callable;
 
 import static org.junit.Assert.*;
 
@@ -26,6 +27,7 @@ public class InetTest {
         //java.sql.Date date = new java.sql.Date();
         System.out.println(str + "    \n" + sdf);
         //System.out.print(inet.getMyAddr());
+
     }
 
     @Test
