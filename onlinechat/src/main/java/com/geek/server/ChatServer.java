@@ -26,7 +26,6 @@ public class ChatServer {
         UUID i= UUID.randomUUID();
         new ChatServer().start();
     }
-
     public void start() {
         boolean startd = false;
         ServerSocket serverSocket = null;
@@ -38,7 +37,6 @@ public class ChatServer {
         } catch (IOException e) {
             System.out.println("server started error");
             e.printStackTrace();
-
         }
         try {
             while (startd) {
@@ -79,7 +77,6 @@ public class ChatServer {
         }
 
         public void send(String str)  {
-
             try {
                 dos.writeUTF(str);
             } catch (IOException e) {
@@ -105,10 +102,8 @@ public class ChatServer {
                      while (iterator.hasNext()){
                         SingleConnection singleConnection=iterator.next();
                         singleConnection.send(str);
-
                     }*/
                 }
-
             } catch (EOFException e) {
                 e.printStackTrace();
             } catch (SocketException e) {/*
