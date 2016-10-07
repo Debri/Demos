@@ -12,7 +12,7 @@ public class MySort {
      * 在第j趟排序中;将位置在j上的元素向左移动在他的前j+1元素的正确的位置上
      */
     public void insertionSort(int[] data) {
-        int i = 0;
+        int i;
         for (int j = 0; j < data.length; j++) {
             int temp = data[j];
             for (i = j; i > 0 && temp < data[i - 1]; i--) {
@@ -72,8 +72,9 @@ public class MySort {
             }
             if (temp < data[child]) {
                 data[i] = data[child];
-            } else
+            } else {
                 break;
+            }
         }
         data[i] = temp;
     }
