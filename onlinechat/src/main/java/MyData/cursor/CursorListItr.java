@@ -13,6 +13,7 @@ public class CursorListItr {
         this.current = current;
     }
 
+
     public boolean isPastEnd() {
         return current == 0;
     }
@@ -26,5 +27,4 @@ public class CursorListItr {
             current = CursorList.cursorNodes[current].next;
         }
     }
-
 }
