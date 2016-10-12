@@ -65,7 +65,6 @@ public class DefaultThreadPool<Job extends Runnable> implements ThreadPool<Job> 
             }
             int count = 0;
             while (count < num) {
-
                 Worker worker = workers.get(count);
                 if (workers.remove(worker)) {
                     worker.shutdown();
