@@ -18,7 +18,7 @@ public class JavaVMStackSOF {
         stackLeak();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         JavaVMStackSOF oom = new JavaVMStackSOF();
         oom.stackLeak();
     }
