@@ -8,6 +8,13 @@ import java.util.concurrent.locks.ReentrantLock;
  * Created by Liuqi
  * Date: 2016/10/22.
  */
+
+/**
+ * 简单的缓存实现
+ *
+ * @param <K>
+ * @param <V>
+ */
 public final class Cache<K, V> {
     private final Lock lock = new ReentrantLock();
     private final int maxCapacity;

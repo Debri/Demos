@@ -19,6 +19,10 @@ import java.net.SocketException;
  * Email: 18908356464@163.com
  * Project: Demos
  */
+
+/**
+ * 客户端
+ */
 public class CharClient extends JFrame {
 
     Socket socket = null;

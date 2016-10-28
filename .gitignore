@@ -1,0 +1,7 @@
+.settings/
+target/
+.idea/
+Liu.iml
+onlinechat/chat.iml
+onlinechat/src/main/resources/
+src/main/resources/
