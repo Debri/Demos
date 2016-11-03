@@ -21,7 +21,6 @@ public class JavaClassExecuter {
      * @return 结果
      */
     public static String execute(byte[] classByte) {
-
         HackSystem.clearBuffer();
         ClassModifier classModifier = new ClassModifier(classByte);
         byte[] modiBytes = classModifier.modifyUTF8Constant("java/lang/System", "tools/HackSystem");
@@ -38,5 +37,9 @@ public class JavaClassExecuter {
             e.printStackTrace();
         }
         return HackSystem.getBufferString();
+    }
+
+    public static void main(String[] args) {
+
     }
 }
