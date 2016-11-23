@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Liu" />
+        <module name="RedisTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Liu" target="1.5" />
+      <module name="RedisTest" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
