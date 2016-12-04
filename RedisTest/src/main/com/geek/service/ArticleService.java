@@ -25,7 +25,7 @@ public class ArticleService {
     }
 
     public void run() {
-        redis.select(15);
+        //redis.select(15);
 
         String articleId = postArticle(
                 redis, "username", "A title", "http://www.google.com");
@@ -53,6 +53,7 @@ public class ArticleService {
         articles = getGroupArticles(redis, "new-group", 1);
         printArticles(articles);
         assert articles.size() >= 1;
+        redis.close();
     }
 
     public String postArticle(Jedis redis, String user, String title, String link) {
@@ -77,7 +78,7 @@ public class ArticleService {
         return articleId;
     }
 
-    public void articleVote( String user, String article) {
+    public void articleVote(String user, String article) {
         long cutoff = (System.currentTimeMillis() / 1000) - ONE_WEEK_IN_SECONDS;
         if (redis.zscore("time:", article) < cutoff) {
             return;
