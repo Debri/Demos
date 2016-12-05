@@ -4,8 +4,6 @@ import com.geek.util.ConnectionUtils;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.ZParams;
 
-import java.util.*;
-
 /**
  * Created by Liuqi
  * Date: 2016/11/23.

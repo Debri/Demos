@@ -31,7 +31,7 @@ public class SimpleStack {
             throw new EmptyStackException();
         }
         Object result = elements[--size];
-        elements[size] = null;//显示的设为空，让GC去回收
+        elements[size] = null;//显示的设为空，让GC去回收.清空过期引用
         return result;
     }
 
