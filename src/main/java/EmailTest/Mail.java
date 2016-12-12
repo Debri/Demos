@@ -1,6 +1,7 @@
 package EmailTest;
 
 import java.io.Serializable;
+import java.util.Hashtable;
 
 /**
  * Created by Liuqi
@@ -84,6 +85,8 @@ public class Mail implements Serializable{
     }
 
     public void setMessage(String message) {
+        Hashtable
         this.message = message;
     }
+
 }

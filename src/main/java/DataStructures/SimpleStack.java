@@ -32,7 +32,10 @@ public class SimpleStack {
         }
         Object result = elements[--size];
         elements[size] = null;//显示的设为空，让GC去回收.清空过期引用
+        System.runFinalization();
+        System.gc();
         return result;
+
     }
 
     private void ensureCapacity() {
