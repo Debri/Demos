@@ -12,6 +12,7 @@ import java.util.logging.Logger;
  * Email: 18908356464@163.com
  * Project: test
  */
+
 public  class EmailUtil { 
     protected final Logger logger= Logger.getLogger(this.getClass().getName());
 

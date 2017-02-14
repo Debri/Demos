@@ -12,7 +12,6 @@ public class AbstractFoo {
     private final AtomicReference<State> init = new AtomicReference<State>(State.NEW);
 
     private enum State {
-
         NEW, INITIALIZING, INITIALIZED;
     }
 
@@ -20,10 +19,10 @@ public class AbstractFoo {
     }
 
     public AbstractFoo(int x, int y) {
-        inieialize(x, y);
+        initialize(x, y);
     }
 
-    protected final void inieialize(int x, int y) {
+    protected final void initialize(int x, int y) {
         if (!init.compareAndSet(State.NEW, State.INITIALIZING)) {
             throw new IllegalStateException("Already init");
         }
