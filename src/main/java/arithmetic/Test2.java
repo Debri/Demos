@@ -24,7 +24,6 @@ public class Test2 {
                 char a = s.charAt(i);
                 if (a == '1') {
                     number++;
-
                 }
             }
         }

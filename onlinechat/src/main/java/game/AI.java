@@ -1,4 +1,4 @@
-package game;
+package game1;
 
 /**
  * Created by Liuqi
