@@ -33,4 +33,10 @@ public class DichotomySort {
             arr[end + 1] = temp;
         }
     }
+
+    public static void main(String[] args) {
+        int [] arr={1,43,65,6,43,7,-4,4,7,0,-34,-65};
+        doSort(arr);
+        DataUtil.doPrint(arr);
+    }
 }
