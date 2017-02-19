@@ -20,7 +20,7 @@ public class DynamicProxyTest {
         }
     }
 
-    static class DynamicProxy implements InvocationHandler {
+    static class DynamicProxy implements  InvocationHandler {
         Object originalObj;
 
         Object bind(Object originalObj) {
