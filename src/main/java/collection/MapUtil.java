@@ -29,7 +29,7 @@ public class MapUtil {
         map.put("c", "bbbbb");
         map.put("a", "ddddd");
 
-        Set<String> keySet = map.keySet();
+        Set<String> keySet =  map.keySet();
         Iterator<String> iter = keySet.iterator();
         while (iter.hasNext()) {
             String key = iter.next();

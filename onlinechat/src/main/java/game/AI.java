@@ -7,7 +7,6 @@ package game1;
  * Project: Demos
  */
 
-import java.awt.*;
 import java.util.Random;
 
 /**
