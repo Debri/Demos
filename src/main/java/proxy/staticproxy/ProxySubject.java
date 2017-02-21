@@ -15,6 +15,6 @@ public class ProxySubject implements Subject {
         long start = System.currentTimeMillis();
         subject.dealTask(taskName);
         long end = System.currentTimeMillis();
-        System.out.println("执行任务花费了" + (end - start) + "毫秒时间");
+        System.out.println( "执行任务花费了" + (end - start) + "毫秒时间");
     }
 }
