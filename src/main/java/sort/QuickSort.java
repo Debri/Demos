@@ -11,10 +11,11 @@ package sort;
  */
 public class QuickSort {
     public static void main(String[] args) {
-        int [] arr = {1,2,4,1,3,2,324,5123,-23,45,-3,0};
+        int[] arr = {1, 2, 4, 1, 3, 2, 324, 5123, -23, 45, -3, 0};
         doSort(arr);
         DataUtil.doPrint(arr);
     }
+
     public static void doSort(int[] arr) {
         quickSortRecursive(arr, 0, arr.length - 1);
     }
@@ -43,6 +44,4 @@ public class QuickSort {
         quickSortRecursive(arr, start, left - 1);
         quickSortRecursive(arr, left + 1, end);
     }
-
-
 }
