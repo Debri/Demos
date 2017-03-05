@@ -48,7 +48,7 @@ public class BinaryHeap {
     /**
      * 插入
      */
-    public void insert(Comparable ele) {
+    public void insert(Element ele) {
         if (currentSize >= DEFAULT_CAPACITY) {
             System.out.println("堆满");
             return;
