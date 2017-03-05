@@ -7,6 +7,7 @@ package effective.singleton;
 
 /**
  * 饿汉模式(变种)
+ * 静态代码快实现   可用
  */
 public class Singleton2 {
     private static Singleton2 singleton2 = null;

@@ -7,7 +7,9 @@ package effective.singleton;
 
 /**
  * 静态内部类方式
+ * 推荐使用
  */
+
 public class Singleton3 {
     /**
      * 将构造方法声明为私有
