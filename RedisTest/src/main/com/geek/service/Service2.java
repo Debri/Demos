@@ -5,7 +5,6 @@ import redis.clients.jedis.Tuple;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.*;
 
 /**
  * Created by Liuqi
