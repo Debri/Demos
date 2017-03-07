@@ -19,7 +19,7 @@ public class GZipAllFiles {
      * @param args
      */
     public static void main(String[] args) {
-        ExecutorService pool = Executors.newFixedThreadPool(Thread_count);
+        ExecutorService pool  =  Executors.newFixedThreadPool(Thread_count);
         for (String str : args) {
             File file = new File(str);
             if (file.exists()) {
