@@ -26,6 +26,5 @@ public class ExecutorTest {
             System.out.println("--------");
         }
         System.out.println(future1);
-
     }
 }
