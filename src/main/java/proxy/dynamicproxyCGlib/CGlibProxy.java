@@ -21,6 +21,9 @@ public class CGlibProxy implements MethodInterceptor {
 
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         //.begin(o.getClass().getName()+"."+method. getName());
-        return null;
+        System.out.println("start");
+        o = methodProxy.invokeSuper(o, objects);
+        System.out.println("end");
+        return o;
     }
 }
