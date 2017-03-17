@@ -28,7 +28,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="chat" target="1.7" />
+      <module name="chat" target="1.8" />
       <module name="Liu" target="1.5" />
       <module name="Liuqi" target="1.5" />
     </bytecodeTargetLevel>
