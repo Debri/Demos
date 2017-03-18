@@ -56,7 +56,7 @@ public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean
     }
 
     @Override
-    public String toString() {
+    public String toString()  {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +

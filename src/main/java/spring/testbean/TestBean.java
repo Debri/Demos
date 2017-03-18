@@ -19,5 +19,6 @@ public class TestBean {
         System.out.println(person);
         System.out.println("现在关闭容器");
         ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
+
     }
 }
