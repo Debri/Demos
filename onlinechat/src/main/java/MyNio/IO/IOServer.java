@@ -28,7 +28,6 @@ public class IOServer {
             while (true) {
                 Socket socket = serverSocket.accept();
                 InputStream inputStream = socket.getInputStream();
-
             }
         } catch (IOException e) {
             e.printStackTrace();

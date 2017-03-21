@@ -53,14 +53,12 @@ public class MySort {
             percDown(data, 0, i);
         }
     }
-
     //数据交换
     private static void swapReference(int[] data, int i, int n) {
         int temp = data[i];
         data[i] = data[n];
         data[n] = temp;
     }
-
     //下坠操作，创建大顶堆
     private static void percDown(int[] data, int i, int n) {
         int child;

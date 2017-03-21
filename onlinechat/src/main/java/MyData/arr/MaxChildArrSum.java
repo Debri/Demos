@@ -14,7 +14,6 @@ public class MaxChildArrSum {
     public static void main(String[] args) {
         int[] arr = {2, 34, -5, -6, 34 - 32, 5};
         MaxChildArrSum.printMax(arr);
-
     }
 
     public static int printMax(int[] arr) {

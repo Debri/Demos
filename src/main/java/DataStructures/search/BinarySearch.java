@@ -12,7 +12,7 @@ public class BinarySearch {
         if (target > array[0][0] && target < array[high - 1][width - 1]) {
             for (int i = 0; i < high; i++) {
                 if (array[i][width - 1] > target) {
-                    if (judgExist(target, array[i], 0, width)>0)
+                    if (judgeExist(target, array[i], 0, width)>0)
                         return true;
                 }
             }
@@ -33,7 +33,7 @@ public class BinarySearch {
             return true;
         return false;
     }*/
-   int judgExist(int khey, int arr[], int start, int end ) {
+   int judgeExist(int khey, int arr[], int start, int end ) {
        int mid;
        while (start <= end) {
            mid = start + (end - start) / 2; //直接平均可能會溢位，所以用此算法

@@ -97,6 +97,7 @@ public class ChargenServer {
                     try {
                         key.channel().close();
                     } catch (IOException e1) {
+                        e1.printStackTrace();
                     }
                 }
             }
