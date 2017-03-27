@@ -10,7 +10,7 @@ public class RepleaceTest {
     @Test
     public void testDoRepleace() throws Exception {
         Repleace repleace = new Repleace();
-        System.out.println(repleace.doRepleace("we are happy"));
+       // System.out.println(repleace.doRepleace("we are happy"));
     }
 
 }
