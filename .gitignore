@@ -1,2 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
+blog
+target
+*.iml
+onlinechat/src/main/resources/
+onlinechat/target/
+target/
